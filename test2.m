@@ -1,5 +1,5 @@
 load soundingSignal40-48.mat
-load data/rx_data_test4.mat
+load data/rx_data_feb_1.mat
 
 %%
 % rx_data_reshaped = reshape(rx_data, [21000,4]);
@@ -22,6 +22,9 @@ figure(4);
 % ax.Children.BaseLine.BaseValue = -60;
 % ax.Children.Marker = 'none';
 plot(FF,10*log10(abs(fftshift(R)))); grid on;
+title("Test in lab w/ amplifier (close)");
+ylabel("Power (dB)");
+xlabel("Frequency");
 
 willie = zeros(length(current_data)-length(s),1);
 for idx = 1:length(willie)
