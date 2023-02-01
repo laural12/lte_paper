@@ -1,15 +1,15 @@
 load soundingSignal40-48.mat
-load rx_data_test3.mat
+load data/rx_data_test4.mat
 
 %%
-rx_data_reshaped = reshape(rx_data, [21000,4]);
-rx_data1 = rx_data_reshaped(:, 1).';
-rx_data2 = rx_data_reshaped(:, 2).';
-rx_data3 = rx_data_reshaped(:, 3).';
-rx_data4 = rx_data_reshaped(:, 4).';
+% rx_data_reshaped = reshape(rx_data, [21000,4]);
+% rx_data1 = rx_data_reshaped(:, 1).';
+% rx_data2 = rx_data_reshaped(:, 2).';
+% rx_data3 = rx_data_reshaped(:, 3).';
+% rx_data4 = rx_data_reshaped(:, 4).';
 
 %%
-current_data = rx_data2;
+current_data = rx_data;
 
 nfft = 4096;
 r = current_data(10501:10501+nfft-1);
@@ -32,3 +32,4 @@ end
 % subplot(311); plot(real(willie)); grid on;
 % subplot(312); plot(imag(willie)); grid on;
 % subplot(313); plot(abs(willie)); grid on;
+
