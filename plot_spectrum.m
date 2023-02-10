@@ -1,13 +1,13 @@
 clc; clear; close all;
 load soundingSignal40-48.mat
-load data/rx_data_hc_feb9.mat
+load data/feb10/rx_data_55a.mat
 
 %%
-num_channels = 2;
-tx_angle = 90;
+num_channels = 4;
+tx_angle = 55;
 trial = "A";
 
-rx_data_reshaped = reshape(rx_data, [21000,2]);
+rx_data_reshaped = reshape(rx_data, [21000,num_channels]);
 rx_data_arr = [];
 
 for i = 1:num_channels

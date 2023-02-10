@@ -9,5 +9,5 @@ rx_data = np.fromfile(dataPath, dtype=np.complex64)
 
 # print(myArray[:10])x
 
-matPath = os.path.join("data", "rx_data_hc_feb9.mat")
+matPath = os.path.join("data", "feb10", "rx_data_0b.mat")
 sp.savemat(matPath, mdict={"rx_data": rx_data})
